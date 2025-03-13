@@ -1,0 +1,9 @@
+Flask
+Flask-Cors
+requests
+beautifulsoup4
+groq
+python-dotenv
+langdetect
+textblob
+nltk
