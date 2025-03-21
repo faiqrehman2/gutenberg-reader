@@ -75,7 +75,7 @@ def get_plot_summary(book_id):
 
     try:
         initial_response = groq_client.chat.completions.create(
-            model="mixtral-8x7b-32768",
+            model="llama-3.3-70b-specdec",
             messages=[{"role": "user", "content": initial_prompt}],
             temperature=0.1,
             max_tokens=500,
@@ -90,7 +90,7 @@ def get_plot_summary(book_id):
             )
 
             detailed_response = groq_client.chat.completions.create(
-                model="mixtral-8x7b-32768",
+                model="llama-3.3-70b-specdec",
                 messages=[{"role": "user", "content": detailed_prompt}],
                 temperature=0.1,
                 max_tokens=500,
@@ -125,7 +125,7 @@ def identify_key_characters(book_id):
         )
 
         characters_response = groq_client.chat.completions.create(
-            model="mixtral-8x7b-32768",
+            model="llama-3.3-70b-specdec",
             messages=[{"role": "user", "content": character_prompt}],
             temperature=0.1,
             max_tokens=800,
@@ -249,7 +249,7 @@ def analyze_sentiment(book_id):
             )
 
             emotion_response = groq_client.chat.completions.create(
-                model="mixtral-8x7b-32768",
+                model="llama-3.3-70b-specdec",
                 messages=[{"role": "user", "content": emotion_prompt}],
                 temperature=0.1,
                 max_tokens=300
@@ -357,7 +357,7 @@ def identify_themes(book_id):
         )
 
         themes_response = groq_client.chat.completions.create(
-            model="mixtral-8x7b-32768",
+            model="llama-3.3-70b-specdec",
             messages=[{"role": "user", "content": theme_prompt}],
             temperature=0.1,
             max_tokens=800
